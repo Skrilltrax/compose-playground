@@ -11,15 +11,9 @@ import org.jetbrains.compose.common.ui.Modifier
 
 @Composable
 fun NavListWidget(destinations: List<Destination>, selectedDestination: Destination) {
-  /*for (destination in destinations) {
-    Row {
-      Text(destination.name)
-    }
-  }*/
-
-  CustomColumn {
-    Text("AAAAA")
-    Text("BBBBBBBBBB")
+  Column {
+    Text("Hello")
+    Text("Compose")
   }
 }
 
