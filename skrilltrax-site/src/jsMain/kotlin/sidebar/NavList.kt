@@ -1,9 +1,10 @@
 package sidebar
 
 import androidx.compose.runtime.Composable
-import androidx.compose.web.attributes.href
-import androidx.compose.web.css.*
-import androidx.compose.web.elements.*
+import org.jetbrains.compose.web.attributes.href
+import org.jetbrains.compose.web.css.Style
+import org.jetbrains.compose.web.css.em
+import org.jetbrains.compose.web.dom.*
 import org.w3c.dom.HTMLUListElement
 
 @Composable
@@ -20,16 +21,16 @@ fun NavList() {
 
 @Composable
 fun DOMScope<HTMLUListElement>.NavListItem(text: String, relativePath: String, isSelected: Boolean) {
-  Li(style = {
-    property("margin-bottom", value(1.75.em))
-    property("line-height", value(1.5.em))
+  Li({
+    style {
+      property("margin-bottom", 1.75.em)
+      property("line-height", 1.5.em)
+    }
   }) {
     A(attrs = {
       href(relativePath)
-      classes {
-        +NavStyleSheet.anchor
-        if (isSelected) +NavStyleSheet.selected
-      }
+      classes(NavStyleSheet.anchor)
+      if (isSelected) classes(NavStyleSheet.selected)
     }) {
       Text(text)
     }

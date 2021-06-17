@@ -1,6 +1,6 @@
 package sidebar
 
-import androidx.compose.web.css.*
+import org.jetbrains.compose.web.css.*
 
 object NavStyleSheet : StyleSheet() {
   val container by style { /* define a class `container` */
@@ -14,12 +14,12 @@ object NavStyleSheet : StyleSheet() {
   }
 
   val navList by style {
-    property("text-align", StylePropertyValue("right"))
-    property("list-style", StylePropertyValue("none"))
+    property("text-align", "right")
+    property("list-style", "none")
   }
 
   val anchor by style {
-    property("text-decoration", StylePropertyValue("none"))
+    property("text-decoration", "none")
     color("#9b9b9b")
     fontSize(1.em)
   }

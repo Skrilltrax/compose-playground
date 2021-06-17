@@ -1,12 +1,11 @@
-import androidx.compose.web.css.StyleSheet
-import androidx.compose.web.css.value
+import org.jetbrains.compose.web.css.StyleSheet
 
 object AppStyleSheet : StyleSheet() {
   init {
     "body" style {
       property(
         "font-family",
-        value("-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,sans-serif")
+        "-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,sans-serif"
       )
     }
   }

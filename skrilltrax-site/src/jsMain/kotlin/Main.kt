@@ -1,7 +1,7 @@
-import androidx.compose.web.css.Style
-import androidx.compose.web.renderComposable
 import navigation.Destination
 import navigation.rememberNavigator
+import org.jetbrains.compose.web.css.Style
+import org.jetbrains.compose.web.renderComposable
 import sidebar.NavList
 import sidebar.NavListWidget
 
